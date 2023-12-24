@@ -70,7 +70,7 @@ void webget() {
   server.send(200, "text/plain", payload);
 }
 
-DevKittyInterface* DevKittyInterface;
+DevKittyInterface* devKittyInterface;
 
 // run payload with get request path
 void webrun() {
@@ -78,7 +78,7 @@ void webrun() {
   if (op.ok) {
     server.send(200, "text/html", "Running payload...");
     DevKittyScreen* runner = new ScriptRunnerScreen(op.result);
-    bool ok = DevKittyInterface->injectScreen(runner);
+    bool ok = devKittyInterface->injectScreen(runner);
     return;
   }
   server.send(500, "text/html", "couldn't run payload: " + op.result);
@@ -90,7 +90,7 @@ void webrunlive() {
   if (op.ok) {
     server.send(200, "text/plain", "running live payload");
     DevKittyScreen* runner = new ScriptRunnerScreen(op.result);
-    bool ok = DevKittyInterface->injectScreen(runner);
+    bool ok = devKittyInterface->injectScreen(runner);
     // TODO: send 503 when device is busy
     return;
   }
@@ -120,12 +120,12 @@ void setup() {
   server.begin();
 
   xTaskCreate(webserverInit, "webapptask", 12 * 1024, NULL, 5, &webapp); // create task priority 1
-  DevKittyInterface = new DevKittyInterface;
+  devKittyInterface = new DevKittyInterface;
   DevKittyScreen* dirScreen = new DirScreen("/");
   DevKittyScreen* splashScreen = new SplashScreen(1500);
-  DevKittyInterface->pushScreen(dirScreen);
-  DevKittyInterface->pushScreen(splashScreen);
-  DevKittyInterface->start();
+  devKittyInterface->pushScreen(dirScreen);
+  devKittyInterface->pushScreen(splashScreen);
+  devKittyInterface->start();
 
 }
 

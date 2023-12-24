@@ -19,8 +19,8 @@ int SplashScreen::update(int button) {
 }
 
 bool SplashScreen::draw() {
-  display->drawXbm(0, 0, 128, 64, splash_bits);
-  display->drawString(94,0,"1.2.1");
-  display->drawRect(92,0,36,12);
+  display->drawXbm(0, 0, 128, 64, ScriptKitty_Splash_bits);
+//   display->drawString(104,0,"1.0");
+//   display->drawRect(102,0,24,12);
   return true;
 }

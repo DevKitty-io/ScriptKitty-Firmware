@@ -61,10 +61,10 @@ void DevKittyScreen::setStrip(Adafruit_NeoPixel* strip){
   this->strip = strip;
 }
 void DevKittyScreen::setDevKittyInterface(DevKittyInterface* nI){
-  this->DevKittyInterface = nI;
+  this->devKittyInterface = nI;
 }
 void DevKittyScreen::pushScreen(DevKittyScreen* screen){
-  this->DevKittyInterface->pushScreen(screen);
+  this->devKittyInterface->pushScreen(screen);
 }
 void DevKittyScreen::alwaysUpdates(bool set){
   this->alwaysUpdate = set;

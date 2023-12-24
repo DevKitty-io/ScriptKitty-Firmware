@@ -61,7 +61,7 @@ class DevKittyScreen {
       void pushScreen(DevKittyScreen*);
       void alwaysUpdates(bool);
    private:
-      DevKittyInterface* DevKittyInterface;
+      DevKittyInterface* devKittyInterface;
       bool alwaysUpdate;
 };
 
@@ -97,4 +97,3 @@ class DevKittyInterface {
 
 
 #endif
-

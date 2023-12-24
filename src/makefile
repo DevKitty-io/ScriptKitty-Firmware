@@ -6,7 +6,7 @@ ARDUINO_CLI_VERSION = 0.22.0
 
 submodules:
 	git submodule init
-	git submodule update
+	# git submodule update
 
 build: submodules
 	docker build . --file Dockerfile --build-arg ARDUINO_CLI_VERSION=$(ARDUINO_CLI_VERSION) --tag scriptkitty-fw
