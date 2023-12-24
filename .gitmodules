@@ -1,7 +1,7 @@
-[submodule "src/third_party/EspTinyUSB"]
-	path = src/third_party/EspTinyUSB
-	url = https://github.com/DevKitty-io/EspTinyUSB.git
+[submodule "src/third_party/ESPTinyUSB"]
+	path = src/third_party/ESPTinyUSB
+	url = https://github.com/DevKitty-io/ESPTinyUSB.git
 	branch = international-keyboard-support
 [submodule "src/third_party/arduino_base64"]
 	path = src/third_party/arduino_base64
-	url = https://github.com/dojyorin/arduino_base64
+	url = https://github.com/dojyorin/arduino_base64.git
