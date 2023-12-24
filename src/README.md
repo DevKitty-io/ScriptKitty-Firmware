@@ -2,7 +2,7 @@
 
 If want to flash the latest version of the ScriptKitty project, [the method
 documented
-here](https://flash.devkitty.io) is
+here](https://update.devkitty.io) is
 easiest.
 
 Docker is used to produce a replicable build environment to ensure
@@ -35,7 +35,7 @@ sudo make generate_bin
 ### macOS
 
 Docker on mac has issues connecting to usb devices and complicates the flashing
-process. A workaround is in place -- ScriptKitty will be built within docker but
+process. A workaround is in place - ScriptKitty will be built within docker but
 then flashed outside of the container.  Some additional steps are also
 necessary to prepare your development environment:
 
@@ -45,10 +45,10 @@ necessary to prepare your development environment:
 
 ```bash
 # Clone the repo
-git clone https://github.com/HakCat-Tech/ScriptKitty.git
+git clone https://github.com/DevKitty/ScriptKitty-Firmware.git
 
 # Navigate to src
-cd ScriptKitty/src
+cd ScriptKitty-Firmware/src
 
 # Verify everything is installed and configured correctly
 make check-mac-deps
@@ -73,4 +73,4 @@ make flash PORT=<port> RESET_SCRIPTS_DURING_FLASH=true
 
 ### Windows
 
-Not currently supported
+```Not currently supported```
