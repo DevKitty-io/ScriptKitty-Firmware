@@ -214,7 +214,7 @@ ScriptKittyConfig getConfig() {
   conf.pid = 0x20b;
   conf.vid = 0x05ac;
 
-  fileOp configRead = readFile("scriptkitty.conf");
+  fileOp configRead = readFile("config.txt");
   if (!configRead.ok) {
     Serial.printf("config file could not be read: %s\n", configRead.result);
     return conf;

@@ -34,7 +34,7 @@ COPY ScriptKitty ./ScriptKitty
 COPY fatfs/default.img .
 COPY scripts ./scripts
 RUN ./scripts/build_web_ui.sh
-RUN ./arduino-cli compile -b esp32:esp32:esp32s2 ScriptKitty \
+RUN ./arduino-cli compile -b esp32:esp32:lolin_s2_mini ScriptKitty \
     --build-property build.partitions=noota_3gffat \
     --build-property build.cdc_on_boot=1 \
     --output-dir=./build
