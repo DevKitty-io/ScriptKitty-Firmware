@@ -14,7 +14,7 @@ building, and flashing from source.
 Dependencies: docker, make.
 ```
 # Clone the repo
-git clone https://github.com/DevKitty/ScriptKitty-Firmware.git
+git clone https://github.com/DevKitty-io/ScriptKitty-Firmware.git
 
 # Navigate to src
 cd ScriptKitty-Firmware/src
@@ -45,7 +45,7 @@ necessary to prepare your development environment:
 
 ```bash
 # Clone the repo
-git clone https://github.com/DevKitty/ScriptKitty-Firmware.git
+git clone https://github.com/DevKitty-io/ScriptKitty-Firmware.git
 
 # Navigate to src
 cd ScriptKitty-Firmware/src
